@@ -1,8 +1,14 @@
-﻿#include <iostream>
-using namespace std;
+﻿#include <stdio.h>
+struct Math {
+	int a, b;
+	int Add();
+};
+int Math::Add() {
+	return a + b;
+}
 int main(){
-	int a, b, c;
-	cin >> a >> b;
-	c = a + b;
-	cout << c;
+	Math me;
+	me.a = 2;
+	me.b = 3;
+	printf("%d\n", me.Add());
 }
